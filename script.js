@@ -2,8 +2,8 @@
 
 const products = [
     {
-        name: "Product 1",
-        price: "$",
+        name: "Ardilla del ITSE",
+        price: "$0.00 no vendemos animales <3",
         image: "squirrel.jpg"
     },
     {

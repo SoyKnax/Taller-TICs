@@ -1,2 +1,157 @@
-/*This is a comment*/
+/*variables de colores para la pagina web*/
+:root {
+    --color-primary: #2e7d32;  /*verde principal fondo*/
+    --color-secundary: #4caf50; /*verde claro*/
+    --color-accent: #81c784;    /*verde suave*/
+    --color-dark: #1b5e20;      /*verde oscuro*/
+    --color-text: #333333;     /*gris oscuro para lectura commoda*/
+    --color-background: #f4f9f4; /*color para el fondo de la pagina*/
+    --color-white: #ffffff; /*color para algunos textos y elementos*/
+    --shadow-soft: 0 4px 12px rgba(46, 125, 50, 0.08); /*sombra para elementos*/
+    --transition: all 0.3s ease; /*transicion para elementos*/
+}
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var ( --color-background);
+    color: var (--color-text);
+    line-height: 1.6; 
+}
+
+/*Para la navegación*/
+
+header{
+    background-color: var(--color-white);
+    box-shadow: var(--shadow-soft);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.2rem 2rem;
+}
+
+header nav ul li {
+    margin-left: 25px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: var(--color-dark);
+    font-weight: 600;
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+header nav ul li a:hover {
+    color: var(--color-primary);
+}
+
+/*Espaciados y secciones generales*/
+
+main { 
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+section {
+    padding: 3rem 0;
+}
+
+h1, h2, h3 {
+    color: var(--color-dark);
+    margin-bottom: 1rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+/*Tarjetas/ bloques de contenido*/
+.cards-container, .servicios, .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+div, article, .card {
+    background-color: var(--color-white);
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: var(--shadow-soft);
+    transition: var(--transition);
+    border-top: 4px solid var(--color-primary);
+}
+
+/*efecto hover (lo que hace que se alcen)*/
+div:hover, article:hover, .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(46, 125, 50, 0.15);
+}
+
+/*Botones y estados hover*/
+
+button, .btn, a.button {
+    display: inline-block;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: 12px 28px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: var(--transition);
+    box-shadow: 0 4px 10px rgba(46, 125, 50, 0.2);
+}
+
+button:hover, .btn:hover, a.button:hover {
+    background-color: var(--color-secundary);
+    box-shadow: 0 6px 15px rgba(46, 125, 50, 0.3);
+    transform: translateY(-2px);
+}
+
+/*Query para dispositivos móviles*/
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+
+    main {
+        padding: 1rem;
+    }
+
+    .cards-container, .servicios, .grid {
+        grid-template-columns: 1fr; /*Esto lo coloca como una sola columna en celulares*/
+    }
+}
+
+/*Para hacer a la ardilla pequeña y que no se vea tan grande en la pagina*/
+img {
+    max-width: 100%; /*Esto es para que la imagen no sea más grande que el contenido*/
+    height: auto;
+    display: block;  /*evita espacios feos debajo de la imagen*/
+    border-radius: 8px;  /*le da esquinas redondeadas a la imagen, super lindo*/
+}
