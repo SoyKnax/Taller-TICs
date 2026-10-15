@@ -52,3 +52,21 @@ const contactButton = document.getElementById("contact");
 contactButton.addEventListener("click", function() {
     window.location.href = "contact.html";
 });
+
+
+const contactForm = document.getElementById("contactForm");
+const formMessage = document.getElementById("formMessage");
+
+if (contactForm && formMessage) {
+    contactForm.addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        const customerName = document.getElementById("name").value.trim();
+
+        formMessage.textContent =
+            `Thank you, ${customerName}! We will contact you soon.`;
+
+        contactForm.reset();
+    });
+}
+
