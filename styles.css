@@ -24,6 +24,48 @@ body {
     line-height: 1.6; 
 }
 
+.encabezado {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 25px;
+}
+
+.enlaces-header {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.enlaces-header a {
+    color: #2e7d32;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.enlaces-header a:hover {
+    color: #1b5e20;
+    text-decoration: underline;
+}
+
+.encabezado h1 {
+    margin: 0;
+    color: #1b5e20;
+}
+
+.enlace-servicios {
+    color: #2e7d32;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.enlace-servicios:hover {
+    color: #1b5e20;
+    text-decoration: underline;
+}
+
 header {
   width: 100%;
   text-align: center;
@@ -267,7 +309,7 @@ body{background-color:#1b5e20}
 
 /* Estilo del Footer */
 footer {
-  background-color: #1b5e20; /* Verde oscuro elegante */
+  background-color: #072309; /* Verde oscuro elegante */
   color: #ffffff;            /* Texto blanco */
   text-align: center;
   padding: 2.5rem 1rem;
@@ -288,3 +330,176 @@ img {
   object-fit: cover;  /* Recorta la imagen para que llene el espacio sin deformarla */
 }
 
+/*Estilo para servicios*/
+/* ===== PÁGINA DE SERVICIOS ===== */
+
+.pagina-servicios {
+    width: 85%;
+    max-width: 1100px;
+    margin: 40px auto;
+}
+
+/* Título verde */
+.titulo-servicios {
+    background-color: #1b5e20;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+}
+
+.titulo-servicios h2 {
+    font-size: 32px;
+    margin: 0 0 10px;
+}
+
+.titulo-servicios p {
+    font-size: 18px;
+    margin: 0;
+}
+
+/* Distribución de las tarjetas */
+.lista-servicios {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+}
+
+/* Cada tarjeta */
+.tarjeta-servicio {
+    background-color: #f5faf5;
+    border: 1px solid #dcebdc;
+    border-radius: 15px;
+    padding: 25px;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.tarjeta-servicio:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+}
+
+.icono-servicio {
+    font-size: 42px;
+}
+
+.tarjeta-servicio h3 {
+    color: #1b5e20;
+    font-size: 21px;
+}
+
+.tarjeta-servicio p {
+    color: #444;
+    line-height: 1.7;
+}
+
+/* Sección para agendar */
+.cita-servicios {
+    background-color: #e8f5e9;
+    border-radius: 15px;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 30px;
+}
+
+.cita-servicios h2 {
+    color: #1b5e20;
+}
+
+.cita-servicios p {
+    color: #444;
+    line-height: 1.6;
+}
+
+.boton-cita {
+    display: inline-block;
+    background-color: #2e7d32;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.boton-cita:hover {
+    background-color: #1b5e20;
+}
+
+/* Pie de página */
+.pie-pagina {
+    background-color: #1b5e20;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Adaptación a teléfonos */
+@media (max-width: 650px) {
+    .pagina-servicios {
+        width: 92%;
+    }
+
+    .lista-servicios {
+        grid-template-columns: 1fr;
+    }
+
+    .titulo-servicios h2 {
+        font-size: 26px;
+    }
+}
+
+/* Barra de búsqueda */
+.searchBar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+/* Campo para escribir */
+.searchBar input {
+    padding: 10px 14px;
+    border: 2px solid #c8e6c9;
+    border-radius: 25px;
+    outline: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.searchBar input:focus {
+    border-color: #388e3c;
+    box-shadow: 0 0 6px rgba(56, 142, 60, 0.2);
+}
+
+/* Botón de la lupa */
+#searchButton {
+    background-color: #388e3c;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#searchButton:hover {
+    background-color: #1b5e20;
+    transform: scale(1.08);
+}
+
+/* Texto descriptivo */
+.texto-sitio {
+    max-width: 240px;
+    margin: 0 0 0 8px;
+    padding-left: 12px;
+    border-left: 3px solid #81c784;
+    color: #4e6250;
+    font-size: 13px;
+    line-height: 1.5;
+    font-style: italic;
+}
