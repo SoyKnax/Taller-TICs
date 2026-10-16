@@ -280,3 +280,11 @@ footer p {
   font-size: 0.95rem;
   color: #e8f5e9;            /* Verde muy claro para lectura suave */
 }
+
+/*Tamaño y forma de imagenes*/
+img {
+  width: 2000px;       /* Ancho fijo deseado */
+  height: 500px;      /* Alto fijo deseado */
+  object-fit: cover;  /* Recorta la imagen para que llene el espacio sin deformarla */
+}
+

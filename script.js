@@ -2,36 +2,57 @@
 
 const products = [
     {
-        name: "Ardilla del ITSE",
-        price: "$0.00 no vendemos animales <3",
-        image: "squirrel.jpg"
+        name: "Animales (Ardilla del ITSE)",
+        price: "Animalitos del ITSE que puedes adoptar, no vendemos animales <3",
+        image: "squirrel_1920x1080.jpg"
     },
     {
-        name: "Product 2",
-        price: "$",
-        image: ""
+        name: "Servicios Médicos",
+        price: "Servicios especializados para tus mascotas",
+        image: "Servicios Medicos.jpg"
     },
     {
-        name: "Product 3",
-        price: "$",
-        image: ""
+        name: "Alimentos",
+        price: "Gran variedad de alimentos para tus mascotas",
+        image: "Alimentos.jpg"
     },
     {
-        name: "Product 4",
-        price: "$",
-        image: ""
+        name: "Casitas para Animales",
+        price: "Tus mascotas se merecen un espacio propio",
+        image: "Casita de animales horizontal.jpg"
     },
     {
-        name: "Product 5",
-        price: "$",
-        image: ""
+        name: "Accesorios",
+        price: "Para que tus mascotas tengan estilo",
+        image: "Accesorios.jpg"
     },
     {
-        name: "Product 6",
-        price: "$",
-        image: ""
+        name: "Stickers",
+        price: "Por si eres fan de los animales y quieres decorar",
+        image: "Stickers_743x1321.png"
     },
 ];
+
+/*Esto es para centrar las imagenes*/
+
+const imagenes = document.querySelectorAll('img');
+
+// Aplica Flexbox al contenedor padre de cada imagen
+imagenes.forEach(img => {
+    const padre = img.parentElement;
+    if (padre) {
+        padre.style.display = 'flex';
+        padre.style.justifyContent = 'center';
+        padre.style.alignItems = 'center';
+    }
+});
+
+// 2. Itera sobre cada imagen y asígnale el mismo tamaño
+imagenes.forEach((img) => {
+  img.style.width = '200px';   // Define el ancho deseado
+  img.style.height = '100px';  // Define el alto deseado
+  img.style.objectFit = 'cover'; // Evita que la imagen se deforme (opcional pero recomendado)
+});
 
 const productsContainer = document.getElementById("products");
 
