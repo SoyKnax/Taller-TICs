@@ -16,6 +16,7 @@ ESTRUCTURA DEL PROYECTO
 - `servicios.html`: información sobre los servicios.
 - `contact.html`: información de contacto.
 - `style.css`: estilos y diseño del sitio web.
+- `script.js`: scripts y backend de toda la página web.
   
 
 COMO VISUALIZAR EL PROYECTO
