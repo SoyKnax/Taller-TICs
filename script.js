@@ -66,7 +66,7 @@ if (productsContainer) {
             <div class="productsInfo">
                 <h3>${product.name}</h3>
                 <p>${product.price}</p>
-                <button>Comprar</button>
+                <button>Ver más</button>
             </div>
         </div>
     `).join("");
