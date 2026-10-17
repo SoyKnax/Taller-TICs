@@ -503,3 +503,10 @@ img {
     line-height: 1.5;
     font-style: italic;
 }
+
+#checkmarkImg {
+    width: 80px !important;
+    height: auto !important;
+    display: block;
+    margin: 10px auto;
+}
